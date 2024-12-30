@@ -9,10 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Connexion à MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/gestionnaire_taches', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
+mongoose.connect('mongodb://127.0.0.1:27017/gestionnaire_taches')
     .then(() => console.log('Connecté à MongoDB'))
     .catch(err => console.error('Erreur de connexion à MongoDB:', err));
 
